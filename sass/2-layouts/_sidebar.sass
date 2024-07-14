@@ -1,0 +1,62 @@
+@use '../1-base/variables'
+@use 'mixins'
+
+.sidebar-container
+    background-color: variables.$dark-secondary
+    height: 100%
+    width: 271px
+    border-right: 1px solid variables.$border-color
+    position: fixed
+    
+    .sidebar-header
+        border-bottom: 1px solid variables.$border-color
+        padding: 1rem     
+
+        .list-options
+            margin-top: 10px
+
+            li
+                display: flex
+                color: variables.$light-color
+                font-size: 18px
+                align-items: baseline
+                font-weight: bold
+                padding: 10px 0
+
+                .li-hover
+                    color: variables.$primary-color
+
+                i
+                    color: variables.$light-color
+                    font-size: 1.2rem
+                    padding-right: 10px
+
+    .playlists-container
+        padding-top: 1.25rem
+        height: calc(100% - 19rem)
+        overflow: hidden 
+
+        .playlists-header
+            display: flex
+            color: variables.$light-color
+            justify-content: space-between
+            font-weight: bold
+            font-size: 18px
+            margin-bottom: 1.25rem
+            padding: 0 1rem
+
+        .playlists
+            overflow: auto
+            height: calc(100% - 2.5rem)
+        
+            .playlist
+                @include mixins.play
+                &:hover
+                    background-color: variables.$hover
+                    border-radius: 0.5rem
+                    margin: 0 1rem
+                    cursor: pointer
+
+            
+
+        

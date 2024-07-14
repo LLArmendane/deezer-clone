@@ -1,0 +1,43 @@
+@use 'variables'
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: 'Arial'
+
+body      
+  display: flex
+  height: 100vh
+  position: relative
+  color: variables.$light-color
+  background-color: variables.$dark-color
+
+ul
+  list-style: none
+
+.logo-deezer
+    width: 130px
+
+.rotate
+    transform: rotate(90deg)
+
+
+::-webkit-scrollbar 
+    width: 10px                
+
+/* Track */
+::-webkit-scrollbar-track 
+  background: variables.$border-color
+
+
+/* Handle */
+::-webkit-scrollbar-thumb 
+  background: variables.$border-color
+  border-radius: 999px
+  border: 2px solid #555
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+  background: #555

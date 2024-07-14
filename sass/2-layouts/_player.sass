@@ -1,0 +1,47 @@
+@use '../1-base/variables'
+@use '../1-base/reset'
+@use 'sidebar'
+@use 'mixins'
+
+.player-container
+    height:80px
+    width: 100vw
+    display: flex
+    background-color: variables.$dark-secondary
+    border-top: 1px solid variables.$border-color
+    position: fixed
+    bottom: 0
+    justify-content: space-between
+    padding-right: 1rem
+    
+    .music
+        @include mixins.play
+
+    .buttons
+        @include mixins.buttons
+        justify-content: center
+
+        .icons
+            width: 20px
+            margin: 0px 10px
+
+    .play
+        display: flex
+        flex-direction: column    
+        justify-content: center
+    
+    .player-time
+        color: white
+        display: flex
+        font-size: 12px
+        align-items: center
+        margin-top: 10px
+
+        .during-time
+            background-color: variables.$primary-color
+            height: 2px
+            width: 28vw
+            margin: 0px 10px
+
+    
+        

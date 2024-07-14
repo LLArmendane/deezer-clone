@@ -1,0 +1,36 @@
+@use '../1-base/variables'
+@use '../1-base/reset'
+@use 'sidebar'
+@use 'mixins'
+
+.music-styles
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    row-gap: 0.5rem
+    column-gap: 2rem
+    margin-bottom: 3rem
+    margin-top: 2rem
+
+
+    .music-style
+        padding: 1rem 2rem
+        border-radius: 1rem
+        height: 8rem
+        display: flex
+        align-items: center
+        justify-content: center
+    
+    .purple
+        background-color: #6211a3
+    
+    .red
+        background-color: red
+    
+    .green
+        background-color: green
+    
+    .blue
+        background-color: blue
+    
+    .pink
+        background-color: purple

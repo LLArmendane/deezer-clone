@@ -1,0 +1,30 @@
+@use '../1-base/variables'
+@use 'mixins'
+
+.songs-container
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    row-gap: 0.5rem
+    column-gap: 2rem
+    margin-bottom: 3rem
+
+    .song
+        display: flex
+        align-items: center
+        background-color: variables.$dark-secondary
+        border-top-right-radius: 0.2rem
+        border-bottom-right-radius: 0.2rem
+
+        img
+            width: 56px
+            height: 56px
+            border-radius: 0.2rem
+            margin-right: 1rem
+        
+        h2
+            font-size: 14px
+            font-weight: normal
+        
+        p
+            font-size: 12px
+            color: variables.$text-secondary

@@ -1,0 +1,120 @@
+@use '../1-base/variables'
+@use '../1-base/reset'
+@use 'sidebar'
+@use 'mixins'
+
+.home-container
+    padding: 1.5rem 7rem
+    display: flex
+    flex-direction: column
+    margin-top: 80px
+    width: 100%
+    overflow-x: hidden
+    align-items: center
+
+    .content
+        max-width: 1600px
+
+        .areas
+            margin-bottom: 2rem
+        
+        .row
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            .btn-seemore
+                img:first-child
+                    margin-right: 2rem
+                img
+                    padding: 0.5rem                
+                    @include mixins.radius
+                    transition: .4s
+                    &:hover
+                        background-color: rgba(255, 255, 255, 0.1)                    
+                        cursor: pointer
+                        
+
+        .area-title
+            h2
+                font-size: 20px
+                padding-bottom: 0.3rem
+            
+            p
+                font-size: 14px
+                color: variables.$text-secondary
+                margin-bottom: 2rem
+        
+        .area-items
+            width: 180px
+            text-align: center
+            display: flex
+            
+            .item
+                padding-right: 1rem
+
+                &:last-child
+                    padding-right: 0
+
+                .text-item
+                    font-size: 14px            
+
+                .item-img
+                    background-color: variables.$dark-secondary
+                    border-radius: 50%
+                    width: 180px
+                    height: 180px
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    margin-bottom: 10px
+                    position: relative
+                    cursor: pointer
+
+
+                    img
+                        width: 60px
+
+                    .play-btn
+                        display: none
+
+                    &:hover
+                        .play-btn
+                            pointer-events: none
+                            display: inline
+                            background: none
+                            border: none
+                            position: absolute
+
+                            
+                .flow         
+                    background: linear-gradient(to right, #c243c6, #54163a)
+
+                    &:hover
+                        .flow-text
+                            display: none
+                        .play-btn
+                            display: inline
+                            background: none
+                            border: none            
+
+                .flow-text
+                    font-family: "Anton", sans-serif
+                    font-size: 30px
+
+                .orange
+                    &:hover
+                        background-color: #E05C36                               
+
+                .pink
+                    &:hover
+                        background-color: #AD18B0
+                
+                .blue
+                    &:hover
+                        background-color: #5162F8
+
+                .green
+                    &:hover
+                        background-color: #29D6B9
